@@ -1,0 +1,6 @@
+# Optional message overrides.
+#
+# Any key from the "messages:" section of config.yml can be added here and it
+# will win over the value in config.yml. Example:
+#
+# no-permission: "<red>You can't do that.</red>"

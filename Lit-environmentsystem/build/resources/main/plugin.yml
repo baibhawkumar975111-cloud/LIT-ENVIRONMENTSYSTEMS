@@ -1,0 +1,36 @@
+name: Lit-environmentsystem
+version: '1.0.0'
+main: com.litteam.environment.LitEnvironment
+api-version: '26.1'
+description: Real-time day/night sync, weather control and an admin GUI for Paper.
+authors: [LIT-Team]
+load: POSTWORLD
+
+commands:
+  lit:
+    description: Opens the LIT-Team environment menu.
+    usage: /<command> [time|weather|reload]
+    aliases: [litenv, environment]
+    permission: lit.environment.use
+
+permissions:
+  lit.environment.admin:
+    description: Full access to the LIT-Team Environment System.
+    default: op
+    children:
+      lit.environment.use: true
+      lit.environment.time: true
+      lit.environment.weather: true
+      lit.environment.reload: true
+  lit.environment.use:
+    description: Open the menu and view status.
+    default: op
+  lit.environment.time:
+    description: Change time and pause or resume the sync.
+    default: op
+  lit.environment.weather:
+    description: Change the weather.
+    default: op
+  lit.environment.reload:
+    description: Reload the configuration.
+    default: op

@@ -1,0 +1,75 @@
+system:
+  enabled: true
+
+day-night:
+  enabled: true
+  # realtime    = follow the clock of the timezone below
+  # accelerated = run at a fixed speed (see game-hours-per-real-minute)
+  mode: realtime
+  timezone: Asia/Kolkata
+  country: India
+  # Real clock times that line up with in-game sunrise (tick 0) and sunset (tick 12000).
+  sunrise: "06:00"
+  sunset: "18:00"
+  pause: false
+  accelerated:
+    game-hours-per-real-minute: 1.0
+
+weather:
+  enabled: true
+  automatic: true
+  default: clear
+  # How often automatic mode picks a new weather, in seconds.
+  automatic-cycle-seconds: 900
+  # Relative chances used when automatic mode picks the next weather.
+  chances:
+    clear: 60
+    rain: 30
+    thunder: 10
+
+worlds:
+  # blacklist with an empty list manages every overworld-type world.
+  # whitelist manages only the worlds named in the list.
+  mode: blacklist
+  list: []
+  # Optional per-world overrides, for example:
+  # per-world:
+  #   world:
+  #     time-enabled: false
+  #     weather-enabled: true
+  per-world: {}
+
+startup:
+  # Intro shown to players when they join.
+  animation: true
+  # Banner printed to the console when the plugin starts.
+  console-banner: true
+  title: "<gradient:gold:yellow><bold>LIT-Team</bold></gradient>"
+  subtitle: "<gray>P R E S E N T S</gray>"
+  particle-circle: true
+  particle: END_ROD
+  radius: 1.4
+  points: 24
+  duration-ticks: 50
+  sound: true
+
+messages:
+  prefix: "<gray>[<gold>LIT-Team</gold>]</gray> "
+  no-permission: "<red>You do not have permission to use this feature.</red>"
+  player-only: "<red>This command can only be used by a player.</red>"
+  reloaded: "<green>Configuration reloaded.</green>"
+  invalid-time: "<red>Invalid time. Use HH:mm, for example 18:30.</red>"
+  time-set: "<green>World time set to <white>{time}</white>.</green> <gray>Sync is paused, use <white>/lit time resume</white> to follow real time again.</gray>"
+  time-paused: "<yellow>Time sync paused. The clock is frozen.</yellow>"
+  time-resumed: "<green>Time sync resumed.</green>"
+  time-prompt: "<yellow>Type a time in chat as <white>HH:mm</white>, or <white>cancel</white> to go back.</yellow>"
+  weather-set: "<green>Weather changed to <white>{weather}</white>.</green>"
+  weather-automatic: "<green>Automatic weather is now <white>{state}</white>.</green>"
+
+gui:
+  main-title: "LIT-Team Environment"
+  time-title: "LIT-Team • Day/Night"
+  weather-title: "LIT-Team • Weather"
+  world-title: "LIT-Team • Worlds"
+  status-title: "LIT-Team • Status"
+  config-title: "LIT-Team • Configuration"
